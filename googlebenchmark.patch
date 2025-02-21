@@ -1,0 +1,12 @@
+--- googlebenchmark-source/src/sysinfo.cc	2025-02-21 18:44:33.432680777 +0000
++++ /usr/local/google/home/dahlb/projects/backup/googlebenchmark-source/src/sysinfo.cc	2025-02-21 18:43:12.504755558 +0000
+@@ -509,7 +509,8 @@
+   }
+   return hardware_threads.max_hthreads;
+ #endif
+-  BENCHMARK_UNREACHABLE();
++  // BENCHMARK_UNREACHABLE();
++  return 1;
+ }
+ 
+ int GetNumCPUs() {

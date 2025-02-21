@@ -19,6 +19,10 @@
   #include <stdlib.h> // For _rotl.
 #endif
 
+#if defined(__clang__) && defined(__wasm__) && defined(__wasm_nontrapping_fptoint__)
+  #include <math.h>
+#endif
+
 #include "xnnpack/common.h"
 #include "xnnpack/fp16.h"
 
